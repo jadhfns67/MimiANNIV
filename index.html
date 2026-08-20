@@ -12,65 +12,97 @@
             scroll-behavior: smooth;
         }
 
-       <style>
+    <style>
+    /* =========================
+       STYLE GÉNÉRAL
+    ========================= */
+
     html {
         scroll-behavior: smooth;
     }
 
     body {
         margin: 0;
-        background-color: #08111F;
+        background-color: #07152F;
         color: white;
         font-family: Arial, Helvetica, sans-serif;
     }
 
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
         padding: 30px 20px;
         text-align: center;
-        background-color: #0D1B2A;
-        border-bottom: 1px solid #D4AF37;
+        background-color: #0A1E4A;
+        border-bottom: 2px solid #C9A227;
     }
 
     header h2 {
         margin: 0;
+        font-size: 24px;
     }
+
+    /* =========================
+       BLEU ROYAL
+    ========================= */
 
     span {
         color: #4F7CFF;
+        text-shadow: 0 0 12px rgba(79, 124, 255, 0.45);
     }
 
+    /* =========================
+       ACCUEIL
+    ========================= */
+
     .accueil {
-        padding: 100px 20px;
+        padding: 120px 20px;
         text-align: center;
-        background: linear-gradient(
-            135deg,
-            #08111F,
-            #162B5C
-        );
+
+        background:
+            radial-gradient(
+                circle at top,
+                rgba(65, 105, 225, 0.35),
+                transparent 45%
+            ),
+            linear-gradient(
+                135deg,
+                #07152F,
+                #0D2A68,
+                #123D91
+            );
     }
 
     .accueil h1 {
         margin-bottom: 30px;
-        font-size: 50px;
+        font-size: 52px;
+        text-shadow: 0 0 20px rgba(79, 124, 255, 0.4);
     }
 
     .accueil p {
         max-width: 700px;
-        margin: 10px auto;
+        margin: 12px auto;
         line-height: 1.8;
     }
 
+    /* =========================
+       TEXTES
+    ========================= */
+
     p {
-        color: #C5D0E0;
+        color: #D1DAEE;
     }
 
     section {
-        padding: 80px 20px;
+        padding: 90px 20px;
     }
 
     section h2 {
         margin-bottom: 40px;
         text-align: center;
+        font-size: 32px;
     }
 
     .texte {
@@ -80,34 +112,121 @@
 
     .texte p {
         line-height: 1.9;
+        font-size: 17px;
     }
 
+    /* =========================
+       MESSAGE
+    ========================= */
+
     #message {
-        background-color: #0D1B2A;
+        background-color: #0A1E4A;
     }
+
+    /* Petite touche royale sous le titre */
+    #message h2::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: #C9A227;
+        margin: 18px auto 0;
+    }
+
+    /* =========================
+       QR CODE / VIDÉO
+    ========================= */
 
     #video {
         text-align: center;
+
+        background:
+            radial-gradient(
+                circle at center,
+                rgba(65, 105, 225, 0.2),
+                transparent 55%
+            ),
+            #07152F;
     }
 
     #video img {
         display: block;
         width: 250px;
         max-width: 90%;
-        margin: 0 auto 25px;
+        margin: 0 auto 30px;
+
+        border: 2px solid #C9A227;
+        border-radius: 15px;
+
+        box-shadow:
+            0 0 20px rgba(65, 105, 225, 0.35);
     }
 
     #video p {
         margin-top: 20px;
+        font-size: 18px;
     }
+
+    /* =========================
+       FIN
+    ========================= */
 
     #contact {
         text-align: center;
-        background-color: #0D1B2A;
+        background-color: #0A1E4A;
+
+        border-top: 1px solid #C9A227;
     }
 
     #contact p {
         margin: 20px;
+    }
+
+    /* =========================
+       PETITES TOUCHES ROYALES
+    ========================= */
+
+    #contact h2::before {
+        content: "♛";
+        display: block;
+        margin-bottom: 15px;
+        color: #C9A227;
+        font-size: 28px;
+    }
+
+    #contact h2::after {
+        content: "✦";
+        display: block;
+        margin-top: 15px;
+        color: #C9A227;
+        font-size: 18px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+        .accueil {
+            padding: 90px 20px;
+        }
+
+        .accueil h1 {
+            font-size: 38px;
+        }
+
+        section h2 {
+            font-size: 27px;
+        }
+
+        .texte p {
+            font-size: 16px;
+        }
+
+        header h2 {
+            font-size: 20px;
+        }
     }
 </style>
 </head>
